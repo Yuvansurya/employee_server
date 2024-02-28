@@ -5,7 +5,7 @@ const mysql = require('mysql');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = 3001;
+const port = process.env.port | 3001;
 
 app.use(bodyParser.json());
 app.use(cors());
